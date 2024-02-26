@@ -17,7 +17,7 @@ import (
 )
 
 const (
-	TeleflowURL     = "https://api.teleflow.co"
+	TeleflowURL     = "https://api.teleflow.khulnasoft.com"
 	TeleflowVersion = "v1"
 )
 
@@ -174,7 +174,7 @@ func buildBackendURL(cfg *Config) *url.URL {
 		return MustParseURL(rawURL)
 	}
 
-	if strings.Contains(cfg.BackendURL.String(), "teleflow.co/v") {
+	if strings.Contains(cfg.BackendURL.String(), "teleflow.khulnasoft.com/v") {
 		return cfg.BackendURL
 	}
 
